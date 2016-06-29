@@ -81,6 +81,8 @@ class PromotionsController extends Controller {
                     $promo->last_refresh = date('Y-m-d H:i:s');
 
                     $promo->save();
+
+                    $this->addNewPromo($promo);
                 }
         }
         else {
