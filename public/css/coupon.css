@@ -1,0 +1,52 @@
+body {
+    font-family:'Inconsolata', Arial, Helvetica, Tahoma, sans-serif;
+    background: url(../images/bg.png)
+}
+
+h1 { font-size: 50px ; line-height: 40px; width: 80%; left: 10%; color: #8A0707;}
+
+h2 { font-size: 50px }
+
+p { font-size: 20px }
+
+#coupon {
+    background: transparent url(../images/coupon.png) 0 0 no-repeat;
+    width:1036px;
+    height:510px;
+    z-index: 1000;
+    position: relative;
+    display: block;
+    margin:auto;
+    top:200px;
+}
+
+.print {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background-color:#ededed;
+    -moz-border-radius:42px;
+    -webkit-border-radius:42px;
+    border-radius:42px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color:#777777;
+    font-family:arial;
+    font-size:24px;
+    font-weight:bold;
+    padding:11px 28px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #ffffff;
+}.print:hover {
+     background-color:#dfdfdf;
+     cursor: pointer;
+ }.print:active {
+      position:relative;
+      top:1px;
+  }
+
+  #merchantLogo {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+  }
