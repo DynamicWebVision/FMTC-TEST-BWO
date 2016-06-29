@@ -11,8 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('coupon');
-});
-
-Route::get('promos', 'PromotionsController@promos');
+Route::get('/', 'PromotionsController@promos');

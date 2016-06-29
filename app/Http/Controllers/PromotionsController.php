@@ -8,11 +8,15 @@ class PromotionsController extends Controller {
 
     public function promos()
     {
+        //Get Cached/Stored Promotion
         $this->currentCashedPromo = \App\Model\Promotions::orderBy('id', 'desc')->take(1)->get();
 
+        //Check to see if we have any promotions stored in the DB yet
         if (isset($this->currentCashedPromo[0])) {
+            //Convert the time from our last refresh to minutes
             $minutesSinceRefresh = (time() - strtotime($this->currentCashedPromo[0]->last_refresh))/60;
 
+            //Check to see if cashed data is older than 10 minutes
             if ($minutesSinceRefresh >= 10) {
                 $this->getNewPromo();
                 return view('coupon', $this->viewVariables);
@@ -48,6 +52,7 @@ class PromotionsController extends Controller {
     }
 
     public function setViewVariables($promo) {
+        //These are the variables that will be displayed in the view
         $this->viewVariables = [
             "couponTitle" =>   $promo->label." at ".$promo->merchant." from ".date("M d Y", strtotime($promo->promo_start_dt))." to ".$promo->promo_end_dt,
             "couponCode" => $promo->coupon_code,

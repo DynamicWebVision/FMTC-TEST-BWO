@@ -19,8 +19,8 @@
 
         <h1>{{$couponTitle}}</h1>
         <h2>Use coupon code: {{$couponCode}}</h2>
-        <p>Your extra details such as terms & conditions would go here!</p>
-        <p>Contact details, phone number, and anything else goes in this area too.</p>
+        <p>The terms and conditions for accepting any of our promotions requires that you</p>
+        <p>use the coupon within the specified dates and are fully clothed when in our store.</p>
 
         <input type="button" class="print" onClick="window.print()" value="Print Voucher"/>
 
